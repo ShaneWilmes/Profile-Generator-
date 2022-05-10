@@ -8,12 +8,7 @@ const path = require('path');
 const outputDir = path.resolve(__dirname, "output");
 const outputPath = path.join(outputDir, "blankSlate.html");
 
-
-
 const myTeam = [];
-
-
-
 
 const getManager = () => {
     return inquirer.prompt([
@@ -226,14 +221,14 @@ const getIntern = () => {
     })
 };
 
-// const generateTeam = () => {
+const generateTeam = () => {
    
-//     // Create the output directory if the output path doesn't exist
-//     if (!fs.existsSync(outputDir)) {
-//         fs.mkdirSync(outputDir)
-//     }
-//     fs.writeFileSync(outputPath, createTeam(myTeam), "utf-8");
-// }
+    // Create the output directory if the output path doesn't exist
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir)
+    }
+    fs.writeFileSync(outputPath, createTeam(myTeam), "utf-8");
+}
 
 
 getManager();
