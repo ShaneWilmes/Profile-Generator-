@@ -2,15 +2,15 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const createTeam = require('./src/createTeam.js');
+const createTeam = require('./src/createTeam.js');  // importing createTeam class
 const fs = require('fs');
 const path = require('path');
 const outputDir = path.resolve(__dirname, "output");
-const outputPath = path.join(outputDir, "blankSlate.html");
+const outputPath = path.join(outputDir, "blankSlate.html");  // uses createTeam class to put HTML in output folder
 
 const myTeam = [];
-
-const getManager = () => {
+// Prompting manager for their information
+const getManager = () => {   
     return inquirer.prompt([
         {
             type: 'input',
@@ -72,6 +72,7 @@ const getManager = () => {
     })
 }
 
+// Giving user/manager a choice of which employee to add next
 const userMenu = () => {
     return inquirer.prompt([
         {
@@ -94,6 +95,7 @@ const userMenu = () => {
         });
 };
 
+// prompting manager for engineer info
 const getEngineer = () => {
     
     return inquirer.prompt([
@@ -157,6 +159,7 @@ const getEngineer = () => {
     })
 };
 
+// prompting manager for intern info
 const getIntern = () => {
     
 
