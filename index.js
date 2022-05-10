@@ -2,9 +2,11 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
+const createTeam = require('./src/createTeam.js');
 const fs = require('fs');
 const path = require('path');
 const outputDir = path.resolve(__dirname, "output");
+const outputPath = path.join(outputDir, "blankSlate.html");
 
 
 
@@ -92,7 +94,7 @@ const userMenu = () => {
                     getIntern();
                     break;
                 default:
-                    // buildTeam();
+                    generateTeam();
             }
         });
 };
@@ -224,14 +226,14 @@ const getIntern = () => {
     })
 };
 
-
- 
-
-
-
-
-
-
+// const generateTeam = () => {
+   
+//     // Create the output directory if the output path doesn't exist
+//     if (!fs.existsSync(outputDir)) {
+//         fs.mkdirSync(outputDir)
+//     }
+//     fs.writeFileSync(outputPath, createTeam(myTeam), "utf-8");
+// }
 
 
 getManager();
