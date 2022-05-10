@@ -10,7 +10,7 @@ const printManager = manager => {
                <i class="fas fa-mug-hot"></i>Manager</div>
                <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${manager.id}</li>
-                <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">/a></span></li>
+                <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
                 <li class="list-group-item">Manager Office Number: ${manager.officeNumber} </li>
                 </ul>
             </div>
@@ -23,12 +23,12 @@ const printEngineer = engineer => {
     <div class="card align-items-center bg font-weight-bold" style="width: 100%;">
                 <div class="card-header bg-primary">
                ${engineer.name} <br/>
-               <i class="fas fa-mug-hot"></i>Engineer</div>
-               <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${engineer.id}</li>
-                <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}</a></span></li>
-                li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHub}">${engineer.gitHub}</a></li>
-                </ul>
+               <i class="fas fa-glasses"></i>Engineer</div>
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${engineer.id}</li>
+            <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+            <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHub}">${engineer.gitHub}</a></li>
+            </ul>               
             </div>
             `;
             html.push(engineerHTML);
@@ -42,9 +42,8 @@ const printIntern = intern => {
                <i class="fas fa-user-gr"></i>Intern</div>
                <ul class="list-group list-group-flush">
                <li class="list-group-item">ID: ${intern.id}</li>
-                <li<li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
-                <li class="list-group-item">School: ${intern.school}</li> class="list-group-item">ID: ${intern.id}</li>
-                
+                <li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+                <li class="list-group-item">School: ${intern.school}               
                 </ul>
             </div>
             `;
